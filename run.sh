@@ -22,6 +22,7 @@
 set -e
 
 echo "Starting http server..."
+export KUBERNETES_MASTER=http://172.17.8.101:8080
 pushd kubernetes/
 python http-server.py > /dev/null 2>&1 &
 http_server_pid=$!
